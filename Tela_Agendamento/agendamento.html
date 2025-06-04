@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Agendamento de Consulta - Clínica</title>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+  <div class="admin-container">
+    <h2>Agendamento de Consultas</h2>
+
+    <section class="cadastro-paciente">
+      <h3>Cadastro do Paciente</h3>
+      <form id="formPaciente">
+        <input type="text" placeholder="Nome do Paciente" id="nomePaciente" required>
+        <input type="text" placeholder="Documento (CPF ou RG)" id="documentoPaciente" required>
+        <input type="text" placeholder="Especialidade Desejada" id="especialidadeDesejada" required>
+        <button type="submit" class="botao-pequeno">Cadastrar Paciente</button>
+      </form>
+    </section>
+
+    <section class="horarios">
+      <h3>Agendamento de Horário</h3>
+      <form id="formHorario">
+        <input type="text" placeholder="Nome do Paciente" id="pacienteHorario" required>
+        <input type="date" id="dataHorario" required>
+        <input type="time" id="horaHorario" required>
+        <button type="submit" class="botao-pequeno">Agendar Consulta</button>
+      </form>
+    </section>
+
+    <section class="relatorios">
+      <h3>Resumo dos Agendamentos</h3>
+      <button onclick="gerarRelatorio()">Gerar Relatório</button>
+      <pre id="outputRelatorio"></pre>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
